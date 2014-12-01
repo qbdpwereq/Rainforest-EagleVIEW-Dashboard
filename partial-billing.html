@@ -1,0 +1,10 @@
+<div class="row">
+
+    <ul class="nav nav-pills nav-stacked col-md-1" ng-controller="pillCtrl">
+      <li class="text-center" data-ng-class="navClass('billing/lastWeek')"><a ui-sref=".lastWeek" data-toggle="pill" style="font-size: 18px">Last Week</a></li>
+      <li class="text-center" data-ng-class="navClass('billing/lastMonth')"><a ui-sref=".lastMonth" data-toggle="pill" style="font-size: 18px">Last Month</a></li>
+      <li class="text-center" data-ng-class="navClass('billing/lastBilling')"><a ui-sref=".lastBilling" data-toggle="pill" style="font-size: 18px">Last Billing</a></li>
+    </ul>
+
+    <div ui-view class="col-md-11"></div>
+</div>

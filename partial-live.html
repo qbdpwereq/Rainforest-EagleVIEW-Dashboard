@@ -1,0 +1,41 @@
+<div class="row">
+
+    <ul class="nav nav-pills nav-stacked col-md-1" ng-controller="pillCtrl">
+    	<li class="text-center" data-ng-class="navClass('live/real')"><a ui-sref=".real" data-toggle="pill" style="font-size: 18px">Live</a></li>
+      <li data-ng-class="navClass('live/pastToday')"><a ui-sref=".pastToday" data-toggle="pill" style="font-size: 18px">Past</a></li>
+    </ul>
+
+    <div ui-view class="col-md-7"></div>
+    <div class="col-md-4">
+    	<div class="panel panel-default">
+                  <div class="panel-heading"><h4 style="font-size: 18px">&nbsp;&nbsp;Peak Alerts Today<span class="glyphicon glyphicon-time pull-left" style="font-size: 18px"></span></</h4></div>
+                  <div class="panel-body">
+                    
+
+
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                      <strong>Warning!</strong> Energy usage peak of  at 8:00 am
+                    </div>
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                      <strong>Warning!</strong> Energy usage peak of  at 10:13 am
+                    </div>
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                      <strong>Warning!</strong> Energy usage peak of  at 11:04 am
+                    </div>
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                      <strong>Warning!</strong> Energy usage peak of  at 12:00 pm
+                    </div>
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                      <strong>Warning!</strong> Energy usage peak of  at 2:15 pm
+                    </div>
+                  </div><!--/panel-body-->
+                </div><!--/panel-->
+    </div>
+
+    
+</div>

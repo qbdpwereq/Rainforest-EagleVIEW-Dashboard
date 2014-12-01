@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/rickshaw/rickshaw.css">
+  <link rel="stylesheet" href="bower_components/nvd3/nv.d3.css">
+
+  <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/d3/d3.js"></script>
+  <script src="bower_components/nvd3/nv.d3.js"></script>
+  <script src="bower_components/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.js"></script>
+  <script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+
+
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="bower_components/angular-cookies/angular-cookies.js"></script>
+
+  <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+  <script type="text/javascript" src="bower_components/rickshaw/rickshaw.js"></script>
+  <script type="text/javascript" src="bower_components/rickshaw/vendor/d3.layout.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  
+  <script src="app.js"></script>
+
+</head>
+
+
+<!-- apply our angular app to our site -->
+<body ng-app="routerApp">
+
+<!-- NAVIGATION ->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" style="font-size: 25px" ui-sref="#">EagleVIEW</a>
+    </div>
+    <ul class="nav navbar-nav" ng-controller="navCtrl">
+        <li class="active" style="font-size: 18px" ng-class="navClass('summary')"><a ui-sref="summary">Summary</a></li>
+        <li style="font-size: 18px" data-ng-class="navClass('live/real')"><a ui-sref="live">Usage Today</a></li>
+        <li style="font-size: 18px" data-ng-class="navClass('billing')"><a ui-sref="billing">Billing &amp; Trends</a></li>
+                      
+    </ul>
+
+</nav>
+
+<div class="container">
+    <div ui-view></div>
+</div>
+
+</body>
+</html>

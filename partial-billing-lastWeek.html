@@ -1,0 +1,15 @@
+<div ng-controller="HistoricalBillWeekBar">
+    <nvd3-line-plus-bar-chart
+            data="exampleData"
+            id="exampleId"
+            margin="{left:100,top:20,bottom:20,right:100}"
+
+            y1AxisLabel="{{y1axislabeltext}}"
+            y2AxisLabel="{{y2axislabeltext}}"
+            y1AxisTickFormat="y1AxisTickFormat()"
+            forceY="[0]"
+            showLegend="true"
+            legendWidth="200"
+            legendHeight="100"
+            height="400">
+    </nvd3-line-plus-bar-chart>

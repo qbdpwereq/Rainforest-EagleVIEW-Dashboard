@@ -1,0 +1,22 @@
+
+            <div class="panel panel-default">
+                  <div class="panel-heading"><h4 style="font-size: 18px"><strong></strong>&nbsp;&nbsp;Live Energy Graph<span class="glyphicon glyphicon-list pull-left" style="font-size: 18px"></span></</h4></div>
+                  <div class="panel-body">
+
+                  <span style="font-size: 18px">Graph Updated every 10 seconds</span>
+                  
+                  <div ng-controller="Real">
+                    
+                    <nvd3 options="options1" data="data" config="{refreshDataOnly: false}"></nvd3>
+                    
+                  </div>
+                  
+
+                  <ul class="list-group">
+                    <li class="list-group-item" style="font-size: 18px"><em>THIS HOUR: &nbsp;&nbsp;&nbsp;  Rate of Usage: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total Usage:</em></li>
+                    <li class="list-group-item" style="font-size: 18px"><em>LAST HOUR: &nbsp;&nbsp;  Rate of Usage: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total Usage:</em></li>
+                  </ul>
+
+                  </div><!--/panel-body-->
+                </div><!--/panel-->
+        </div>

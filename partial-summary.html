@@ -1,0 +1,109 @@
+<div class="row">
+
+    <div class="col-md-12">        
+        <div class="row">
+            <!-- center left--> 
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h4 style="font-size: 18px">&nbsp;&nbsp;Live Energy Usage Summary<span class="glyphicon glyphicon-time pull-left" style="font-size: 18px"></span></</h4></div>
+                  <div class="panel-body">
+                     
+                    <span style="font-size: 19px"><em>Current Rate of Energy Usage:</em></span> 
+                    <div id="placeholder" style="width:600px;height:90px;" ng-controller="LiveBullet">
+                      <nvd3-bullet-chart
+                        data="exampleData"
+                        id="exampleId"
+                        margin="{left:150,top:30,bottom:30,right:00}"
+                        width="500"
+                        height="90">
+                        <svg></svg>
+                      </nvd3-bullet-chart>
+                    </div>
+                    <span style="font-size: 19px"><em>Total Expenditure Today:</em></span> 
+                    <div id="placeholder" style="width:600px;height:100px;" ng-controller="TotalBullet">
+                      <nvd3-bullet-chart
+                        data="exampleData"
+                        id="exampleIds"
+                        margin="{left:150,top:30,bottom:30,right:00}"
+                        width="500"
+                        height="90">
+                        <svg></svg>
+                      </nvd3-bullet-chart>
+                    </div>
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span></button>
+                      <span style="font-size: 15px">
+                      <strong>PEAK ALERT:</strong> 2 KW peak at 10:00 am. Click <a ui-sref="live">here</a> for more.</span>
+                    </div>
+                  </div><!--/panel-body-->
+                </div><!--/panel-->
+
+            </div><!--/col-->
+    
+
+            <div class="col-md-6">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h4 style="font-size: 18px">&nbsp;&nbsp; Billing &amp; Trends<span class="glyphicon glyphicon-export pull-left" style="font-size: 18px"></span></</h4></div>
+                  <div class="panel-body">
+
+                    
+                    <span style="font-size: 18px"><em>Cumulative Energy Expenditure For Current Billing:</em></span><br> 
+                    <div ng-controller="HistoricalBillWeekBar">
+    <nvd3-line-plus-bar-chart
+            data="exampleData"
+            id="exampleIdss"
+            margin="{left:100,top:20,bottom:20,right:100}"
+
+            y1AxisLabel="{{y1axislabeltext}}"
+            y2AxisLabel="{{y2axislabeltext}}"
+            y1AxisTickFormat="y1AxisTickFormat()"
+            forceY="[0]"
+            showLegend="true"
+            legendWidth="200"
+            legendHeight="100"
+            height="150">
+    </nvd3-line-plus-bar-chart>
+</div>
+                    <ul class="list-group">
+                      
+                      <li class="list-group-item" style="font-size: 18px"><em>Expected Expenditure For Current Billing: $150.34<em></li>
+                      <li class="list-group-item" style="font-size: 18px"><em>Expenditure for Last Billing Cycle:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $162.40</em></li>
+                    </ul>
+<span style="font-size: 18px">Click <a ui-sref="live">here</a> for more.</span></span>
+                  </div><!--/panel-body-->
+                </div><!--/panel-->
+
+
+
+              
+            </div><!--/col-span-6-->
+           
+      </div>
+
+     <div class ="row">
+        <div class="col-md-12">
+          
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h4 style="font-size: 18px">&nbsp;&nbsp; Suggestions<span class="glyphicon glyphicon-list pull-left" style="font-size: 18px"></span></</h4></div>
+                  <div class="panel-body">
+                   <div ng-controller="CarouselDemoCtrl">
+  <div style="height: 100px">
+    <carousel interval="myInterval">
+      <slide ng-repeat="slide in slides" active="slide.active">
+        <img ng-src="{{slide.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>{{slide.text}}</h4>
+        </div>
+      </slide>
+    </carousel>
+  </div>
+                  </div><!--/panel-body-->
+                </div><!--/panel-->
+        </div>
+     </div>
+    </div><!--/col-span-9-->
+
+</div>
+</div>
+<!-- /Main -->
